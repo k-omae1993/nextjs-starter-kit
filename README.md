@@ -2,33 +2,75 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+## Git から Clone した後に必要なパッケージのインストールを行います。
 
 ```bash
-npm run dev
-# or
+yarn install
+```
+
+## サーバーの立ち上げ
+
+---
+
+```bash
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Storybook の立ち上げ
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+yarn sb
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## テスト
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tips
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### バージョン情報
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+主なパッケージのパージョンは以下の通りです。
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Next.js : 12.1.0
+- React : 17.0.2
+- TypeScript : 4.6.2
+- Tailwind CSS : 3.0.23
+- ESLint : 8.10.0
+- Prettier : 2.5.1
+- Storybook：6.4.19
+- Jest：27.5.1
+- React Testing Library：12.1.3
+
+## プロジェクト
+
+### コンポーネントの単位
+
+---
+
+- Atom (Presentational Component)
+- コンポーネントの実装は行わず Tailwind CSS の @apply などで決められる範囲内が目安
+
+- Molecule (Presentational Component)
+- 複数の Atom をまとめて使いやすくする程度
+
+- Organism (Presentational Component)
+- SSR / CSR でデータ挿入前の最大の単位
+
+- Template (Container Component)
+- Client Sider Rendering (CSR) でデータ挿入
+
+- Page (Container Component)
+- SSR でデータ挿入
+
+## Authors
+
+大前 紘一(Koichi Omae)
