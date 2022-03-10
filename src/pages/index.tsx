@@ -7,6 +7,7 @@ const Home: NextPage = () => {
   return (
     <div className='font-bold'>
       <h1>Hello, World!</h1>
+      <div className='w-[100px] h-[100px] bg-black'></div>
     </div>
   );
 };
